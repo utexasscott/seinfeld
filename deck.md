@@ -1,21 +1,28 @@
 # The Deck
 
-Read this when opening an episode. **Do not choose from these lists — count into
-them.** Choosing gets you the median idea every time; that's how you end up with
-five episodes about a rude waiter.
+Lookup tables for `roll.ps1`. **You never choose from these lists — the dice
+choose, and you look up what they landed on.** Choosing gets you the median idea
+every time; that's how you end up with ten episodes about a rude waiter.
 
 ## Drawing
 
-Take `TURN` from `state.md` as your seed. For each column below, take the entry
-at index `(TURN + offset) mod (length of list)`, counting from the top, starting
-at zero. Offsets: **Venue +0, Object +3, Transgression +5, Rule +8, Guest +11.**
+From the repo root:
 
-Draw four plots — one per regular — by re-drawing with `TURN + 17` for the
-second, `TURN + 31` for the third, `TURN + 43` for the fourth.
+```
+powershell -NoProfile -ExecutionPolicy Bypass -File .\roll.ps1
+```
+
+(The bypass flag is required — this machine blocks unsigned scripts, and that's
+a per-invocation override, not a system change.)
+
+It returns a target length, a chaos turn, a straight-man assignment, a guest
+hook, and four plots as indices. Look each index up below, counting from the top
+starting at zero.
 
 **If a draw looks impossible to write, that is the episode.** The hard
-combination is the funny one. Do not redraw for comfort. Redraw only if you
-land on something already used this season.
+combination is the funny one. Do not re-run the script because you dislike what
+came up — that is the one thing you may not do. Re-roll only if you land on
+something already used this season, and note it in the bible when you do.
 
 ## Venue
 
@@ -90,6 +97,25 @@ land on something already used this season.
 5. `david-puddy` — agrees to something enormous without emotion
 6. `newman` + `kramer` — a joint venture, already in progress
 7. `frank-costanza` + `estelle-costanza` — both, fighting, in the apartment
+
+## Chaos Card
+
+Never drawn in advance. When the turn counter reaches the **chaos turn**, stop,
+run the script with `-Chaos`, and honor what comes up **within two turns** —
+whatever you had planned. It also names a victim; the card lands on them hardest.
+
+0. Someone's parents arrive unannounced
+1. The power goes out and does not come back
+2. Newman appears, holding information he intends to sell
+3. A stranger recognizes a character and has the story badly wrong
+4. Something in the refrigerator has gone bad and everyone can smell it
+5. A phone call from someone who should not have this number
+6. The object is discovered broken, missing, or eaten
+7. Uncle Leo traps whoever was about to leave
+8. The wrong person answers the door
+9. A character's lie is repeated back to them by a third party who believes it
+10. Someone returns a thing they were never lent
+11. The venue has a new policy, effective today, non-negotiable
 
 ## Naming
 
