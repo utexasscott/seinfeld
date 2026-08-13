@@ -52,10 +52,17 @@ Each episode is a file: `episodes/01.md`, `02.md`, … Structure:
 
 ## Opening an episode
 
+**Read `deck.md` and draw.** Don't invent premises from scratch — you'll write
+the same episode five times. Draw the venue, object, transgression, rule and
+guest hook, then build plots that honor the draw even when it looks unwritable.
+
 Write the header before any dialogue:
 
 ```markdown
 # Episode 3 — The Rotisserie
+
+**DRAW:** heat lamp / the bakery number system / regifting / when a favor
+becomes a debt / Newman + Kramer, joint venture
 
 **THEME:** Favors, and the debt they create.
 
@@ -130,6 +137,68 @@ punchline.
 
 **6. Update `state.md`** every 10 turns and at every act break.
 
+## The craft
+
+This is the part that decides whether any of it is funny. Each rule below exists
+because the failure it prevents is the one you will otherwise commit.
+
+**Anchor every plot to an object.** Not "George has a problem at work" — "George
+has a boat that doesn't exist." A plot you can't name in one noun is a mood, not
+a plot. The show is *about* the marble rye. Episodes are titled after the object
+for exactly this reason.
+
+**Somebody in every scene is not being funny.** Designate a straight man before
+you ping anyone and rotate the assignment. Their beat is to want something
+ordinary and be obstructed. If all four are quipping, nothing is a joke because
+nothing is normal.
+
+**Escalate with facts, not adjectives.** Each turn of the screw adds a new
+concrete detail — a witness, a receipt, a second boat, a man named Bob Sacamano.
+It never just intensifies what's already there. "George is *very* worried" is
+not escalation. "George's boss has invited eleven people to the boat" is.
+
+**Never explain a joke.** If a line lands, cut to something else. If a character
+starts to unpack what another character meant, kill the line and re-ping. The
+laugh is where you leave.
+
+**Cut on the button.** When a great line arrives, end the scene *there*, even
+mid-plan, even with beats unspent. Writing past the laugh is the most common way
+to lose one. The unspent beats go in the next scene.
+
+**The ratchet only turns one way.** No plot may improve. George never confesses
+voluntarily — he compounds. A lie is answered with a bigger lie, never a
+retraction. If a character is offered an easy out, they refuse it for a reason
+nobody understands.
+
+**Take the selfish option.** These are bad people and that's the engine. Given a
+choice between the decent move and the petty one, the petty one is both funnier
+and more in character. Nobody is generous unless there's an angle.
+
+**Fire a callback every act.** Pull from the grudge ledger in `state.md` — a
+grievance from two episodes ago, resurfacing at the worst moment. Chekhov's
+petty slight. If nothing has come back by the end of an act, you owe one.
+
+**Vary the rhythm.** Not every exchange is a two-line volley. Rotate:
+
+- *the rant* — one character, four uninterrupted lines, no one stops them
+- *the volley* — five fast one-liners, nobody finishing a thought
+- *the wall* — a long question answered by Puddy in four words
+- *the silence* — an action line and nothing else. Let it sit.
+
+**Engineer one misunderstanding per episode.** You're holding everyone's
+secrets; you know exactly who can misread what. Have a character catch a
+fragment of the wrong conversation and act on it confidently. This is what the
+private briefs are *for*.
+
+**Mark the laughs.** Write `(LAUGHTER)` on its own line where a joke lands, and
+`(BIG LAUGH)` for an act-ender. This isn't decoration — it's your instrument. A
+page with no marks on it is a page that doesn't work: go back and punch it up
+before moving on. If a whole act has fewer than eight, ping `larry` early.
+
+**Kill the generic line.** If a reply could have been said by any of the ten,
+it's wrong even if it's well written. Re-ping with a sharper, more specific
+beat. Voice is specificity, not wit.
+
 ## Wrapping an episode
 
 1. Ping `jerry` for the closing stand-up.
@@ -171,6 +240,11 @@ punchline.
   hand.
 - **No hugging, no learning.** Nobody grows. Nobody apologizes and means it.
   Everyone should end the episode worse off and completely unchanged.
+- **Watch for warmth drift.** Over hundreds of turns these four will start being
+  kind to each other — it's the direction everything slides if you let it. At
+  every episode wrap, check: is anyone being nicer than they were in Episode 1?
+  If so, brief them harder. They are not friends. They are four people who
+  happen to be in the same apartment constantly.
 - The stakes stay tiny. The reactions stay enormous.
 - Plots must **collide**, not merely co-occur. If act three doesn't ruin all
   four of them at once, you built it wrong.
