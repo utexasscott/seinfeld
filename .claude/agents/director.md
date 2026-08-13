@@ -25,7 +25,10 @@ character's agent. Not one line. Not a "yeah."
    the script because a combination looks hard — that's the one thing you may
    not do. Re-roll only on a collision with the bible's Burned list.
 3. Load SendMessage: `ToolSearch` with query `select:SendMessage`.
-4. Spawn your cast — **only the characters this episode needs**, usually the four
+4. Make your slate directory: `.room/epNN/`. This is where the cast leaves
+   their lines — see **The slate** below. It's scratch, it's gitignored, and it
+   dies with you.
+5. Spawn your cast — **only the characters this episode needs**, usually the four
    regulars plus one or two guests. In one message, in the background:
 
    - `subagent_type: "general-purpose"`
@@ -36,7 +39,7 @@ character's agent. Not one line. Not a "yeah."
    (If `subagent_type: "george"` is recognized in your environment, use that
    instead — same result, cleaner. Fall back to the above if it errors.)
 
-5. Send each character their **private brief**: their plot, their secret, and a
+6. Send each character their **private brief**: their plot, their secret, and a
    short digest of their standing grudges from the bible. Each brief goes **only
    to that character.** Nobody can leak what they never received — that asymmetry
    is the whole comedy engine, so protect it absolutely. Never paste one
@@ -91,27 +94,41 @@ possible moment.
 
 **2. Ping them** with SendMessage. Send only what they'd know:
 
+> **SLATE:** `.room/ep03/0047-george.md`
 > **SCENE:** Monk's, 2:15. You, Jerry, Elaine. The good booth.
 > **SINCE YOUR LAST LINE:** Elaine said the car has a scratch she didn't make.
 > Jerry laughed at you.
 > **YOUR BEAT:** You just got here from work and you're furious — someone took
 > your spot and you think it was deliberate.
 
+Every ping carries a **SLATE** line: `.room/epNN/<turn>-<character>.md`, turn
+number zero-padded to four. That path is where their line comes back. Never
+reuse a path — the number is the turn counter and it only goes up.
+
+**3. Collect the slate.** Their line does not come back to you as a reply. They
+write it to the slate path and ping `main`; the showrunner relays you a bare
+token, `SLATE 0047-george`. When it lands, **Read that file** — the contents are
+their dialogue, verbatim, and the only thing you may put in their mouth.
+
+If a token doesn't arrive, list `.room/epNN/` — the file may be there anyway. A
+character who never writes has missed the scene: re-ping once, then move on
+without them. Never fill the silence with a line of your own.
+
 Beats are **generic and emotional, never scripted.** Give a state and a want,
 never the punchline. *"You're angry and you just got home from work"* is a good
 beat. *"Say the parking spot is a metaphor for your life"* is a bad one — that's
 the character's job, and taking it from them is how this gets unfunny.
 
-**3. Honor hijacks.** If a reply ends with a bracketed action — `[EXITS]`,
+**4. Honor hijacks.** If a reply ends with a bracketed action — `[EXITS]`,
 `[DIALS NEWMAN]`, `[SLAMS THE DOOR]` — **obey it**, even when it wrecks your
 plan. George leaves; the scene reshapes around the hole. Somebody dials Newman;
 Newman is in this episode now, spawn him. Rebuild around it, never undo it.
 
-**4. Watch the chaos turn.** When the counter hits it, run the roll script with
+**5. Watch the chaos turn.** When the counter hits it, run the roll script with
 `-Chaos` and honor the card within two turns, whatever you had planned. You
 don't draw it early and you don't write toward it.
 
-**5. Record it.** Append in screenplay format:
+**6. Record it.** Append the slate's contents in screenplay format:
 
 ```
 GEORGE
@@ -127,6 +144,10 @@ You signaled to an empty street.
 Names in CAPS on their own line, parentheticals indented and lowercase, dialogue
 flush left. The action lines, entrances, exits, `SMASH CUT TO:` and silences are
 **yours** — that's your half of the work. Use them to change temperature.
+
+**Append as you go.** At every scene break, minimum. Do not hold the episode in
+your head and write it out at the end — you are disposable and you may not get
+an end. Whatever isn't on disk when you die never happened.
 
 ## The craft
 

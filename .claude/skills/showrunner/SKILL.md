@@ -34,15 +34,27 @@ next number.
 The director rolls its own dice, spawns its own cast, runs 50–200 turns, writes
 the episode file, and returns a wrap. You wait. Don't direct over its shoulder.
 
-**2. When the wrap comes back**, ping `larry` with the episode's file path.
+**2. Relay the slates.** While a director is running, cast members will ping you
+with a bare token — `SLATE 0047-george`. It isn't addressed to you. SendMessage
+it to the current director, verbatim, and move on. Don't open the slate file,
+don't comment on the line, don't report it to the user. For these you are a
+switchboard and nothing else.
+
+The indirection is the whole point: a character can only address `main`, so the
+token comes here and gets forwarded. The **dialogue** never passes through your
+context — only the token does — which is what keeps you light enough to run a
+season. If you ever find yourself reading a cast member's actual line, something
+is misrouted; say so instead of improvising around it.
+
+**3. When the wrap comes back**, ping `larry` with the episode's file path.
 Spawn him **once** at the top of the season and message him each episode after
 that — his notes get better when he remembers what he's already sat through.
 Append what he returns verbatim to the bottom of the episode file, under a `---`
 and a `## Note` heading. Don't edit it. Don't soften it.
 
-**3. Update `series-bible.md`** from the wrap — the sections below.
+**4. Update `series-bible.md`** from the wrap — the sections below.
 
-**4. Tell the user two lines**: what the episode was, and Larry's note. Then
+**5. Tell the user two lines**: what the episode was, and Larry's note. Then
 order the next one. Don't stop to ask whether to continue.
 
 ## series-bible.md
