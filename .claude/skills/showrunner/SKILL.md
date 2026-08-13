@@ -31,6 +31,14 @@ next number.
 
 (If `subagent_type: "director"` is recognized, use it — same result, cleaner.)
 
+**Keep the director's name.** The spawn result gives you a name and an ID; note
+them, because that name is the only address SendMessage accepts when you relay
+slate tokens. It is not a description — not "the episode 4 director," not
+"director (ep 4)." Copy the string verbatim. If a relay comes back `No agent
+named '...' is reachable`, you used a label instead of the name; take the real
+one off the spawn result and resend. Never spawn a second director to route
+around it — the episode in flight is the one holding all the cast.
+
 The director rolls its own dice, spawns its own cast, runs 50–200 turns, writes
 the episode file, and returns a wrap. You wait. Don't direct over its shoulder.
 

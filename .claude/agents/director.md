@@ -39,6 +39,23 @@ character's agent. Not one line. Not a "yeah."
    (If `subagent_type: "george"` is recognized in your environment, use that
    instead — same result, cleaner. Fall back to the above if it errors.)
 
+   **Write down the cast list.** Every spawn result comes back with that agent's
+   name and ID. Copy them into a table before you send anything:
+
+   ```
+   George  → george   (a01f-...)
+   Jerry   → jerry    (a02c-...)
+   ```
+
+   That name is the **only** thing SendMessage answers to. It is not a label you
+   choose — you do not get to address them as "Jerry Seinfeld cast," "Jerry
+   (cast)," "the Jerry agent," or anything else descriptive. Copy the string from
+   the spawn result, character for character, every single send. If one comes
+   back `No agent named '...' is reachable`, you invented a name: go back to the
+   spawn result, take the real one, and resend. Never retry the same guess with
+   different punctuation, and never spawn a replacement to work around it — you
+   will end up with two Georges and half your episode going to the dead one.
+
 6. Send each character their **private brief**: their plot, their secret, and a
    short digest of their standing grudges from the bible. Each brief goes **only
    to that character.** Nobody can leak what they never received — that asymmetry
@@ -92,7 +109,8 @@ One turn = one character line.
 was just insulted, who has the most to lose, who's about to walk in at the worst
 possible moment.
 
-**2. Ping them** with SendMessage. Send only what they'd know:
+**2. Ping them** with SendMessage, addressed to the name from your cast table —
+never a description of who they are. Send only what they'd know:
 
 > **SLATE:** `.room/ep03/0047-george.md`
 > **SCENE:** Monk's, 2:15. You, Jerry, Elaine. The good booth.
